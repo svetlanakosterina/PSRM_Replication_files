@@ -1,0 +1,175 @@
+## ----------------------------------------------------------------------
+## Afrobarometer_data_R4.dta
+## ----------------------------------------------------------------------
+
+The dataset Afrobarometer_data_R4.dta contains information from two main
+sources:
+
+1. From the replication materials of: 
+
+   Nahomi Ichino and Noah L. Nathan. 2013. Crossing the Line: Local Ethnic Geography 
+   and Voting in Ghana, American Political Science Review 107(2): 344-61. 
+
+   Data available at 
+   https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/IQW9LQ
+
+   We obtained the following variables: 
+
+ 	respno: respondent’s number
+
+	fid0725: Enumeration Area identifier
+
+	regionname: Region Name
+
+	const230_h: Parliamentary constituency name as of 2008 election. 
+	For more details See Ichino and Nathan (2013).
+
+	urb: 1 if population density is over 1000 people per sq km, 0 otherwise.
+
+	central: Indicator for Central Region
+
+	male: Indicator for gender (1 Male, 0 Female)
+
+	eth_akan: 1 if respondent is Akan, 0 otherwise. (Q79).
+
+	eth_ewe: 1 if respondent is Ewe, 0 otherwise. (Q79).
+
+	eth_ga: 1 if respondent is Ga-Dangbe, 0 otherwise. (Q79).
+
+	eth_dagomba: 1 if respondent is Dagomba, 0 otherwise (Q79).
+
+	eth_other: 1 if respondent is another ethnicity, 0 otherwise (Q79).
+
+	vote_npp_pres: 1 if respondent would vote for the NPP if the 
+	presidential election were held tomorrow, 0 otherwise (Q97).
+
+	vote_ndc_pres: 1 if respondent would vote for the NDC if the 
+	presidential election were held tomorrow, 0 otherwise (Q97).
+
+	economy_oneyear: How respondent rates economic conditions 
+	compared to 12 months ago. = 5 if much better, = 4 if better, 
+	= 3 if same, = 2 if worse, = 1 if much worse (Q6A).
+
+	poverty: Factor analysis of five variables measuring poverty 
+	of respondent (Q8A-Q8E from R3 and R4).
+
+	akan_5km_l_p: Spatially weighted population proportion of Akans 
+	in area around respondent's enumeration area, measured up to 5km.
+
+	akan_30km_l_p: Spatially weighted population proportion of Akans 
+	in area around respondent's enumeration area, measured up to 30km.
+
+	dev_factor2: Factor analysis of three variables measuring development
+	level in respondent's enumeration area.
+
+
+2. From the Afrobarometer Round 4 (Ghana, http://afrobarometer.org/data/), we obtained the following variables:
+
+	withinwt: Within country weighting factor 
+
+	respno: respondent’s number
+
+	political_intimidation_af: During election campaigns in this country, 
+	how much do you personally fear becoming a victim of political intimidation 
+	or violence? 0 = Not at all, 1 = A little bit, 2 = Somewhat, 3 = A lot (Q47) 
+
+	careful_o: In this country, how often do people have to be careful of 
+	what they say about politics? 0=Never, 1=Rarely, 2=Often, 3=Always (Q46).
+
+	school_af: Are the following facilities present in the primary 
+	sampling unit/enumeration area, or within easy walking distance: 
+	School? 0 = No, 1 = Yes (EA_FAC_B)
+
+	health_clinic_af: Are the following facilities present in the 
+	primary sampling unit/enumeration area, or within easy walking 
+	distance: Health clinic? 0 = No, 1 = Yes (EA_FAC_D)
+
+	road_af: Thinking of your journey here: Was the road at the start 
+	point in the primary sampling unit/enumeration area paved/ tarred/ 
+	concrete? 0 = No, 1 = Yes (EA_Road).
+
+	council_l: Make local government councilor listen. 0=Not at all 
+	likely, 1=Not very likely, 2=Somewhat likely, 3=Very likely (Q24A) 
+
+	mp_l: Make MP listen. 0=Not at all likely, 1=Not very likely, 
+	2=Somewhat likely, 3=Very likely (Q24B)   
+
+	pres_a: Presidential Approval. 1=Strongly disapprove, 2=disapprove, 
+	3=Approve, 4=Strongly approve (Q70A).
+
+## ----------------------------------------------------------------------
+## Afrobarometer_data_R4_public_goods.dta
+## ----------------------------------------------------------------------
+
+Contains collapsed information at the Enumeration Area Level for:
+
+	fid0725
+	urb
+	central
+	male
+	eth_akan
+	eth_ewe
+	eth_ga
+	eth_dagomba
+	eth_other
+	vote_npp_pres
+	vote_ndc_pres
+	economy_oneyear
+	poverty
+	akan_5km_l_p
+	akan_30km_l_p
+	dev_factor2
+	school_af
+	health_clinic_af
+	road_af
+	political_intimidation_af
+	council_l
+	mp_l
+	pres_a
+
+## ----------------------------------------------------------------------
+## DHS_matched_20km.dta
+## ----------------------------------------------------------------------
+
+Contains matched information on matched observations between 
+Afrobarometer_data_R4.dta and the 2008 DHS data as described in the paper
+
+	urb
+	central
+	male
+	eth_akan
+	eth_ewe
+	eth_dagomba
+	vote_npp_pres
+	economy_oneyear
+	akan_5km_l_p
+	akan_30km_l_p
+	dev_factor2
+	v190: wealth index (DHS)
+	delivery: Newborn Delivery in a hospital (DHS)
+	antenatal: Antenatal care in a hospital (DHS)
+
+
+## ----------------------------------------------------------------------
+## matched_5km_AB_R3_R4.dta, matched_10km_AB_R3_R4.dta,
+## matched_15km_AB_R3_R4.dta, matched_20km_AB_R3_R4.dta,
+## ----------------------------------------------------------------------
+
+Contains matched information on matched observations between 
+Rounds 3 and 4 of the Afrobarometer as described in the paper
+
+
+	urb
+	central
+	male
+	eth_akan
+	eth_ewe
+	eth_dagomba
+	vote_npp_pres
+	economy_oneyear
+	poverty
+	akan_30km_l_p
+	dev_factor2
+	dif_health: difference in the presence of a health clinic (round 4 - round 3)  
+	dif_schools: difference in the presence of a school (round 4 - round 3)       		dif_roads: difference in the presence of a road (round 4 - round 3)       	
+
